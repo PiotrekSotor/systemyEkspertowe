@@ -14,7 +14,6 @@ public enum AcademicThemeEnum {
 
 	public AcademicThemeEnum getByCode(String code) {
 		if (code != null) {
-
 			switch (code) {
 			case "TECH":
 				return TECH;

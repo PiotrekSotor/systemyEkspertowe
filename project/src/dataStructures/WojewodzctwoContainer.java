@@ -28,8 +28,11 @@ public class WojewodzctwoContainer {
 			for (String line : lines) {
 				List<String> tokens = Arrays.asList(line.split(";"));
 				Wojewodzctwo newWoj = new Wojewodzctwo();
-				newWoj.setName(tokens.get(0));
-				newWoj.setCode(tokens.get(1));
+				newWoj.setName(tokens.get(0).trim());
+				newWoj.setCode(tokens.get(1).trim());
+				newWoj.setCityName(tokens.get(2).trim());
+				newWoj.setSize(Integer.parseInt(tokens.get(3).trim()));
+				newWoj.setExpensivity(Integer.parseInt(tokens.get(4).trim()));
 				wojewodzctwaList.add(newWoj);
 			}
 

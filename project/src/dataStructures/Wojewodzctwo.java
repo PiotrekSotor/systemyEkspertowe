@@ -4,8 +4,11 @@ import java.util.List;
 
 public class Wojewodzctwo {
 	private String name;
+	private String cityName;
 	private String code;
 	private List<Wojewodzctwo> neighbours;
+	private Integer expensivity;
+	private Integer size;
 
 	public Wojewodzctwo() {
 	}
@@ -53,6 +56,30 @@ public class Wojewodzctwo {
 		// TODO Auto-generated method stub
 		return 7 * code.hashCode() + 17 * name.hashCode() + 11 * neighbours.get(0).hashCode()
 				+ 23 * neighbours.get(1).hashCode() + 31 * neighbours.get(2).hashCode();
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+
+	public Integer getExpensivity() {
+		return expensivity;
+	}
+
+	public void setExpensivity(Integer expensivity) {
+		this.expensivity = expensivity;
+	}
+
+	public String getCityName() {
+		return cityName;
+	}
+
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
 	}
 
 }
