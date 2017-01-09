@@ -1,0 +1,16 @@
+zachodniopomorskie;ZACHPOM
+pomorskie;POM
+warmiñsko-mazurskie;WARMAZ
+lubuskie;LUBUS
+wielkopolskie;WIELK
+kujawsko-pomorskie;KUJPOM
+mazowieckie;MAZ
+podlaskie;PODL
+dolnoœl¹skie;DOLN
+opolskie;OPOL
+³ódzkie;LODZ;
+œl¹skie;SLAS;
+œwiêtokrzyskie;SWIET
+lubelskie;LUBEL
+ma³opolskie;MALOP
+podkarpackie;PODKA
