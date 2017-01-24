@@ -54,8 +54,8 @@ public class Wojewodzctwo {
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return 7 * code.hashCode() + 17 * name.hashCode() + 11 * neighbours.get(0).hashCode()
-				+ 23 * neighbours.get(1).hashCode() + 31 * neighbours.get(2).hashCode();
+		return 7 * code.hashCode() + 17 * name.hashCode() + 11 * neighbours.get(0).name.hashCode()
+				+ 23 * neighbours.get(1).name.hashCode() + 31 * neighbours.get(2).name.hashCode();
 	}
 
 	public Integer getSize() {

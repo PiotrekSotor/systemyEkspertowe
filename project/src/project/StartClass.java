@@ -1,5 +1,7 @@
 package project;
 
+import javax.swing.JFrame;
+
 import dataStructures.WojewodzctwoContainer;
 import gui.MainFrame;
 
@@ -9,7 +11,9 @@ public class StartClass {
 		// TODO Auto-generated method stub
 		WojewodzctwoContainer container = new WojewodzctwoContainer();
 		System.out.println(container.toString());
-		new MainFrame();
+		JFrame frame = new MainFrame();
+		frame.setVisible(true);
+		frame.repaint();
 	}
 
 }

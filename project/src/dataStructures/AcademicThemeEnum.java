@@ -4,7 +4,7 @@ public enum AcademicThemeEnum {
 	TECH("Techniczny"), MECH("Mechaniczny"), INF("Informatyczny"), ARCH("Architektoniczny"), ART("Artystyczny"), MAL(
 			"Malarski"), MUZ("Muzyczny"), INSTR("Instrumentalny"), WOK("Wokalny"), MED("Medyczny"), STOM(
 					"Stomatologiczny"), ECON("Ekonomiczny"), HUM("Humanistyczny"), LEANG(
-							"Jêzykowy"), SCI("Œcis³y"), THEO("Teoretyczny"), UNKNOWN("undefined");
+							"Jêzykowy"), SCI("Œcis³y"), THEO("Teoretyczny"), WF("WF"), UNKNOWN("undefined");
 
 	private String name;
 
@@ -12,7 +12,12 @@ public enum AcademicThemeEnum {
 		this.name = name;
 	}
 
-	public AcademicThemeEnum getByCode(String code) {
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	public static AcademicThemeEnum getByCode(String code) {
 		if (code != null) {
 			switch (code) {
 			case "TECH":
@@ -47,6 +52,10 @@ public enum AcademicThemeEnum {
 				return SCI;
 			case "THEO":
 				return THEO;
+			case "WF":
+				return WF;
+			case "EEE":
+				return UNKNOWN;
 
 			default:
 				return UNKNOWN;
