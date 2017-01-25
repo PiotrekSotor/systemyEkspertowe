@@ -13,4 +13,8 @@ public enum Grade {
 		return grade.toString();
 	}
 
+	public Integer getGrade() {
+		return grade;
+	}
+
 }

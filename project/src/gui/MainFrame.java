@@ -4,9 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import javax.swing.AbstractListModel;
 import javax.swing.DefaultComboBoxModel;
@@ -201,8 +204,9 @@ public class MainFrame extends JFrame {
 
 				List<University> universities = Data.getInstance().getUniversities();
 				Map<University, Float> result = new HashMap<>();
+				Random rand = new Random();
 				for (University uni : universities) {
-					float baseFactor = 1.0f;
+					float baseFactor = 1.1f - rand.nextFloat() * 0.2f;
 					baseFactor *= getDistanceFactor(dist, livingIn, uni);
 					baseFactor *= getFinanceFactor(finance, uni);
 					baseFactor *= getAmbitionFactor(ambition, uni);
@@ -217,16 +221,54 @@ public class MainFrame extends JFrame {
 					baseFactor *= getArtFactor(music, uni);
 
 					result.put(uni, baseFactor);
-					System.out.println(uni.toString() + " " + Float.toString(baseFactor));
+					if (baseFactor != 0.0f)
+						System.out.println(uni.toString() + " " + Float.toString(baseFactor));
+				}
+				Map<University, Float> top5 = getTop5Results(result);
+				System.out.println("Final results:");
+				top5.keySet().stream().forEach(p -> System.out.println(p.toString() + " " + top5.get(p)));
+			}
+
+			private Map<University, Float> getTop5Results(Map<University, Float> result) {
+				Map<University, Float> top5 = new HashMap<>();
+				Map<Float, List<University>> tmp = new HashMap<>();
+				result.keySet().stream().forEach(p -> {
+					if (tmp.containsKey(result.get(p))) {
+						tmp.get(result.get(p)).add(p);
+					} else {
+						tmp.put(result.get(p), new ArrayList<University>(Arrays.asList(p)));
+					}
+				});
+				List<Float> floatResults = new ArrayList<>();
+				floatResults.addAll(tmp.keySet());
+				Collections.sort(floatResults);
+				int floatResultsPosition = floatResults.size() - 1;
+				for (int i = 0; i < 5 && floatResultsPosition > -1; ++i) {
+					List<University> unis = tmp.get(floatResults.get(floatResultsPosition));
+					Collections.sort(unis, new Comparator<University>() {
+						@Override
+						public int compare(University o1, University o2) {
+							// TODO Auto-generated method stub
+							return (o1.getRating() - o2.getRating());
+						}
+					});
+					for (University uni : unis) {
+						if (i < 5) {
+							top5.put(uni, floatResults.get(floatResultsPosition));
+							++i;
+						}
+					}
+					floatResultsPosition--;
 				}
 
+				return top5;
 			}
 
 			private float getDistanceFactor(Distance expected, WojewodztwoEnum livingIn, University uni) {
 				if (uni.getWojewodzctwo().equals(livingIn)) {
 					return 1.0f;
 				}
-				if (uni.getWojewodzctwo().getNeighbours().contains(uni.getWojewodzctwo())) {
+				if (uni.getWojewodzctwo().getNeighbours().contains(livingIn)) {
 					if (expected.equals(Distance.MID))
 						return 1.0f;
 					return 0.8f;
@@ -262,36 +304,43 @@ public class MainFrame extends JFrame {
 				return Math.min(1.0f, counter.floatValue() / 2.0f);
 			}
 
-			private float getMathFactor(Grade extected, University uni) {
-
-				return 1.0f;
+			private float getMathFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnMath, uni);
 			}
 
-			private float getPhysicsFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getPhysicsFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnPhysics, uni);
 			}
 
-			private float getPolishFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getPolishFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnPolish, uni);
 			}
 
-			private float getForeignFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getForeignFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnForeign, uni);
 			}
 
-			private float getBiologyFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getBiologyFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnBiology, uni);
 			}
 
-			private float getChemistryFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getChemistryFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnChemistry, uni);
 			}
 
-			private float getDrawFactor(Grade extected, University uni) {
-				return 1.0f;
+			private float getDrawFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnDraw, uni);
 			}
 
-			private float getArtFactor(Grade extected, University uni) {
+			private float getArtFactor(Grade expected, University uni) {
+				return calculateGradeFactor(expected, Data.themesSensitiveOnArt, uni);
+			}
+
+			private float calculateGradeFactor(Grade expected, List<AcademicThemeEnum> themesSensitiveOn,
+					University uni) {
+				if (uni.getThemesMatching().stream().anyMatch(p -> themesSensitiveOn.contains(p))) {
+					return 0.7f + 0.3f * expected.getGrade().floatValue() / 4.0f;
+				}
 				return 1.0f;
 			}
 
@@ -306,11 +355,6 @@ public class MainFrame extends JFrame {
 		JLabel lblRezultaty = new JLabel("Rezultaty");
 		lblRezultaty.setBounds(251, 258, 129, 20);
 		getContentPane().add(lblRezultaty);
-
-		// System.out.println("Hello console");
-		// Data.getInstance().getUniversities().stream().forEach(p ->
-		// System.out.println(p));
-
 	}
 
 	class ModelList extends AbstractListModel {

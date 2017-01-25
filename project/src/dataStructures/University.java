@@ -74,6 +74,6 @@ public class University {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return name;
+		return name + ", " + wojewodzctwo.getName();
 	}
 }
