@@ -1,24 +1,24 @@
 Uniwersytet Szczeciñski;ZACHPOM;51;THEO;HUM;SCI;EEE
-Akademia Sztuki w Szczecinie;ZACHPOM;1;ART;MAL;HUM;EEE
+Akademia Sztuki w Szczecinie;ZACHPOM;45;ART;MAL;HUM;EEE
 Zachodniopomorski Uniwersytet Technologiczny w Szczecinie;ZACHPOM;39;TECH;MECH;SCI;ARCH
 Pomorski Uniwersytet Medyczny w Szczecinie;ZACHPOM;32;MED;STOM;EEE;EEE
 Uniwersytet Gdañski;POM;21;LEANG;HUM;THEO;ARCH
 Politechnika Gdañska;POM;15;TECH;INF;SCI;MECH
 Gdañski Uniwersytet Medyczny;POM;9;MED;STOM;EEE;EEE
-Akademia Wychowania Fizycznego i Sportu;POM;1;WF;EEE;EEE;EEE
-Akademia Muzyczna;POM;6;MUZ;INSTR;THEO;WOK
-Akademia Sztuk Piêknych;POM;1;ART;MAL;HUM;EEE
+Akademia Wychowania Fizycznego i Sportu;POM;25;WF;EEE;EEE;EEE
+Akademia Muzyczna;POM;60;MUZ;INSTR;THEO;WOK
+Akademia Sztuk Piêknych;POM;25;ART;MAL;HUM;EEE
 Uniwersytet Warmiñsko-Mazurski;WARMAZ;35;INF;ARCH;THEO;LEANG
 Uniwersytet Zielonogórski;LUBUS;51;HUM;LEANG;THEO;ARCH
 Uniwersytet im. Adama Mickiewicza w Poznaniu;WIELK;3;INF;ARCH;THEO;LEANG
-Akademia Muzyczna im. Ignacego Jana Paderewskiego w Poznaniu;WIELK;7;MUZ;INSTR;THEO;WOK
-Akademia Wychowania Fizycznego im. E. Piaseckiego w Poznaniu;WIELK;1;WF;THEO;EEE;EEE
+Akademia Muzyczna im. Ignacego Jana Paderewskiego w Poznaniu;WIELK;50;MUZ;INSTR;THEO;WOK
+Akademia Wychowania Fizycznego im. E. Piaseckiego w Poznaniu;WIELK;25;WF;THEO;EEE;EEE
 Uniwersytet Ekonomiczny;WIELK;22;THEO;ECON;LEANG;EEE
 Politechnika Poznanska;WIELK;17;TECH;MECH;INF;SCI
 Uniwersytet Medyczny;WIELK;12;MED;STOM;EEE;EEE
 Uniwersytet Kazimierza Wielkiego;KUJPOM;61;INF;ARCH;THEO;LEANG
 Uniwersytet Technologiczno-Przyrodniczy im. Jana i Jêdrzeja Œniadeckich;KUJPOM;51;INF;ARCH;SCI;MECH
-Akademia Muzyczna im. Feliksa Nowowiejskiego;KUJPOM;8;MUZ;INSTR;THEO;WOK
+Akademia Muzyczna im. Feliksa Nowowiejskiego;KUJPOM;80;MUZ;INSTR;THEO;WOK
 Akademia Medyczna im. Ludwika Rydygiera w Bydgoszczy;KUJPOM;17;MED;STOM;EEE;EEE
 Warszawski Uniwersytet Medyczny;MAZ;8;MED;STOM;EEE;EEE
 Uniwersytet Warszawski;MAZ;1;INF;ARCH;THEO;LEANG
@@ -27,28 +27,28 @@ Akademia Sztuk Piêknych w Warszawie;MAZ;1;ART;MAL;HUM;EEE
 Politechnika Warszawska;MAZ;4;TECH;MECH;INF;SCI
 Politechnika Bia³ostocka;PODL;51;INF;ARCH;SCI;MECH
 Uniwersytet Medyczny w Bia³ymstoku;PODL;25;MED;STOM;EEE;EEE
-Uniwersytet Muzyczny Fryderyka Chopina;PODL;4;MUZ;INSTR;THEO;WOK
+Uniwersytet Muzyczny Fryderyka Chopina;PODL;40;MUZ;INSTR;THEO;WOK
 Uniwersytet w Bia³ymstoku;PODL;37;HUM;LEANG;THEO;ARCH
 Politechnika Wroc³awska;DOLN;5;INF;ARCH;SCI;MECH
 Uniwersytet Wroc³awski;DOLN;7;INF;ARCH;THEO;LEANG
 Uniwersytet Ekonomiczny;DOLN;34;THEO;ECON;LEANG;EEE
 Uniwersytet Przyrodniczy;DOLN;29;HUM;LEANG;THEO;ARCH
-Akademia Wychowania Fizycznego;DOLN;1;WF;THEO;EEE;EEE
+Akademia Wychowania Fizycznego;DOLN;15;WF;THEO;EEE;EEE
 Uniwersytet Medyczny im. Piastów Œl¹skich we Wroc³awiu;DOLN;18;MED;STOM;EEE;EEE
-Akademia Sztuk Piêknych;DOLN;1;ART;MAL;HUM;EEE
+Akademia Sztuk Piêknych;DOLN;25;ART;MAL;HUM;EEE
 Politechnika Opolska;OPOL;49;INF;ARCH;SCI;MECH
 Uniwersytet Opolski;OPOL;51;INF;ARCH;THEO;LEANG
 Uniwersytet £ódzki;LODZ;16;HUM;LEANG;THEO;ARCH
 Politechnika £ódzka;LODZ;14;TECH;MECH;INF;SCI
-Akademia Muzyczna;LODZ;3;MUZ;INSTR;THEO;WOK
-Pañstwow¹ Wy¿sz¹ Szko³ê Sztuk Plastycznych w £odzi;LODZ;1;ART;MAL;HUM;EEE
+Akademia Muzyczna;LODZ;30;MUZ;INSTR;THEO;WOK
+Pañstwow¹ Wy¿sz¹ Szko³ê Sztuk Plastycznych w £odzi;LODZ;10;ART;MAL;HUM;EEE
 Politechnika Œl¹ska;SLAS;19;INF;ARCH;SCI;MECH
 Œl¹ski Uniwersytet Medyczny;SLAS;30;MED;STOM;EEE;EEE
 Uniwersytet Ekonomiczny;SLAS;47;THEO;ECON;LEANG;EEE
 Uniwersytet Œl¹ski;SLAS;13;INF;ARCH;THEO;LEANG
-Akademia Sztuk Piêknych;SLAS;1;ART;MAL;HUM;EEE
-Akademia Muzyczna im. Karola Szymanowskiego w Katowicach;SLAS;5;MUZ;INSTR;THEO;WOK
-Akademia Wychowania Fizycznego im. Jerzego Kukuczki;SLAS;1;WF;THEO;EEE;EEE
+Akademia Sztuk Piêknych;SLAS;25;ART;MAL;HUM;EEE
+Akademia Muzyczna im. Karola Szymanowskiego w Katowicach;SLAS;50;MUZ;INSTR;THEO;WOK
+Akademia Wychowania Fizycznego im. Jerzego Kukuczki;SLAS;15;WF;THEO;EEE;EEE
 Uniwersytet Jana Kochanowskiego;SWIET;51;HUM;LEANG;THEO;ARCH
 Politechnika Œwiêtokrzyska;SWIET;51;TECH;MECH;INF;SCI
 Uniwersytet Medyczny;LUBEL;24;MED;STOM;EEE;EEE
@@ -59,8 +59,8 @@ Uniwersytet Ekonomiczny;MALOP;46;THEO;ECON;LEANG;EEE
 Uniwersytet Rolniczy im. Hugona Ko³³¹taja;MALOP;38;INF;ARCH;THEO;LEANG
 Politechnika Krakowska im. Tadeusza Koœciuszki;MALOP;41;TECH;MECH;INF;SCI
 Akademia Górniczo-Hutnicza;MALOP;6;TECH;MECH;INF;SCI
-Akademia Muzyczna;MALOP;2;MUZ;INSTR;THEO;WOK
-Akademia Sztuk Piêknych im. Jana Matejki;MALOP;1;ART;MAL;HUM;EEE
-Akademia Wychowania Fizycznego im. Bronis³awa Czecha;MALOP;1;WF;THEO;EEE;EEE
+Akademia Muzyczna;MALOP;19;MUZ;INSTR;THEO;WOK
+Akademia Sztuk Piêknych im. Jana Matejki;MALOP;45;ART;MAL;HUM;EEE
+Akademia Wychowania Fizycznego im. Bronis³awa Czecha;MALOP;45;WF;THEO;EEE;EEE
 Uniwersytet Rzeszowski;PODKA;51;INF;ARCH;THEO;LEANG
 Politechnika Rzeszowska im. Ignacego £ukasiewicza;PODKA;45;TECH;MECH;INF;SCI

@@ -233,10 +233,12 @@ public class MainFrame extends JFrame {
 				Map<University, Float> top5 = new HashMap<>();
 				Map<Float, List<University>> tmp = new HashMap<>();
 				result.keySet().stream().forEach(p -> {
-					if (tmp.containsKey(result.get(p))) {
-						tmp.get(result.get(p)).add(p);
-					} else {
-						tmp.put(result.get(p), new ArrayList<University>(Arrays.asList(p)));
+					if (result.get(p) > 0.5f) {
+						if (tmp.containsKey(result.get(p))) {
+							tmp.get(result.get(p)).add(p);
+						} else {
+							tmp.put(result.get(p), new ArrayList<University>(Arrays.asList(p)));
+						}
 					}
 				});
 				List<Float> floatResults = new ArrayList<>();
@@ -248,7 +250,6 @@ public class MainFrame extends JFrame {
 					Collections.sort(unis, new Comparator<University>() {
 						@Override
 						public int compare(University o1, University o2) {
-							// TODO Auto-generated method stub
 							return (o1.getRating() - o2.getRating());
 						}
 					});
@@ -260,7 +261,6 @@ public class MainFrame extends JFrame {
 					}
 					floatResultsPosition--;
 				}
-
 				return top5;
 			}
 
@@ -344,6 +344,9 @@ public class MainFrame extends JFrame {
 				return 1.0f;
 			}
 
+			private void showResult(Map<University, Float> top5) {
+				// if ()
+			}
 		});
 		getContentPane().add(btn_run);
 
@@ -359,8 +362,6 @@ public class MainFrame extends JFrame {
 
 	class ModelList extends AbstractListModel {
 
-		// AcademicThemeEnum.values();
-		// String[]
 		String[] values = new String[50];
 		List<String> valuesList = new ArrayList<>();
 		List<AcademicThemeEnum> enums = Arrays.asList(AcademicThemeEnum.values());
